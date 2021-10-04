@@ -1,0 +1,40 @@
+﻿@model IEnumerable<StudentListVM>
+
+@{
+   ViewData["Title"] = "Student Course Grades";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+   <thead>
+      <tr>
+         <th>
+            @Html.DisplayNameFor(model => model.ENumber)
+         </th>
+         <th>
+            @Html.DisplayNameFor(model => model.FullName)
+         </th>
+         <th>
+            @Html.DisplayNameFor(model => model.CourseGrades)
+         </th>
+      </tr>
+   </thead>
+   <tbody>
+      @foreach (var item in Model)
+      {
+         <tr>
+            <td>
+               @Html.DisplayFor(modelItem => item.ENumber)
+            </td>
+            <td>
+               @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+               @Html.DisplayFor(modelItem => item.CourseGrades)
+            </td>
+         </tr>
+      }
+   </tbody>
+</table>
+
